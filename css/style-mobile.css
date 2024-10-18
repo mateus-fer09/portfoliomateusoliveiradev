@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+:root {
+    --purple1: #11001c;
+    --purple2: #190028;
+    --purple3: #220135;
+    --purple4: #32004f;
+    --purple5: #7f01c9;
+
+    --white1: #fbfaff;
+    --white2: #f2ebfb;
+}
+
+
+@media screen and (max-width: 768px) {
+    .header-content .nav-content .navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        height: 100%;
+        width: 0px;
+        transition: 0.3s ease;
+        overflow: hidden;
+    }
+
+    
+.header-content .nav-content .navigation-content .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.3em;
+}
+
+    .header-content .nav-content #open-nav {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: transparent;
+        color: var(--purple5);
+        font-size: 1.5em;
+    }
+
+    .header-content .nav-content .navigation #close-nav {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: transparent;
+        color: var(--purple5);
+        font-size: 1.5em;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header-content .nav-content #logo .name-perfil{
+        font-weight: 700;
+        font-size: 1.3em;
+        color: #fff;
+    }
+    
+    .header-content .nav-content #logo .dev {
+        color: var(--purple5);
+        font-size: 0.9em;
+    }
+}
