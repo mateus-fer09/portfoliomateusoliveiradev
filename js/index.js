@@ -24,3 +24,16 @@ allLinks.forEach(link => {
         closeNavAncora();
     });
 });
+
+
+/* Carrosel */
+
+
+const nextButton = document.getElementById("nextslide")
+const slideActive = document.querySelector(".active")
+
+const moverSlide = () => {
+    slideActive.style.marginLeft = "-426px"
+}
+
+nextButton.addEventListener("click", moverSlide)
