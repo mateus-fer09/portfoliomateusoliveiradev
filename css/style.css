@@ -214,15 +214,7 @@ header {
     border-right: 2px solid #ffff00;
 }
 
-.skills .skills-content .react {
-    opacity: 50%;
-}
-
-.skills .skills-content .node {
-    opacity: 50%;
-}
-
-.skills .skills-content .mongodb {
+.skills .skills-content .disabled {
     opacity: 50%;
 }
 
