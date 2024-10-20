@@ -12,7 +12,9 @@ const closeNav = () => {
 }
 
 const closeNavAncora = () => {
-    nav.style.width = "0px"
+    if (window.innerWidth <= 768) {
+        nav.style.width = "0px"
+    }
 }
 
 

@@ -57,6 +57,10 @@ header, main {
     background-color: #111;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Configuração de estilo - NÃO MODIFICAR */
 
 body {
