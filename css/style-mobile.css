@@ -11,6 +11,22 @@
     --white2: #f2ebfb;
 }
 
+@media screen and (max-width: 1110px) {
+    .sobre-content .description {
+        max-width: 500px;
+    }
+
+    .sobre-content .description .bio-profile p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .sobre-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .header-content .nav-content .navigation {

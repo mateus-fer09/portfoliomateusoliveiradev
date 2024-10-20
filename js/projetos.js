@@ -30,7 +30,7 @@ const exibirProjetos = () => {
                             <i class="bi bi-eye"></i>
                             <button>Acessar projeto</button>
                         </a>
-                        <a href="${val.repositorio}">
+                        <a href="${val.repositorio}" target="_blank">
                             <i class="bi bi-github"></i>
                             <button>Acessar repositório</button>
                         </a>

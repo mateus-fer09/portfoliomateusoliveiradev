@@ -296,3 +296,77 @@ header {
     font-size: 0.9em;
     font-weight: 500;
 }
+
+.sobre-content {
+    width: 90%;
+    min-height: 500px;
+    background-color: #111;
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sobre-content .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-content .profile .foto-perfil {
+    max-width: 150px;
+    flex-shrink: 0;
+}
+
+.sobre-content .profile .foto-perfil img {
+    border-radius: 50%;
+    border: 2px solid var(--purple5);
+    flex-shrink: 0;
+}
+
+.sobre-content .profile .social {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.sobre-content .profile .social a {
+    color: #fff;
+}
+
+.sobre-content .profile .social a button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.7em;
+    background-color: #222;
+    border-radius: 50%;
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: 0.3s ease-in;
+}
+
+.sobre-content .profile .social a button:hover {
+    background-color: var(--purple5);
+    box-shadow: 1px 1px 10px #220135 inset;
+    transform: translate(0px, -10px);
+}
+
+.sobre-content .description {
+    max-width: 600px;
+}
+
+.sobre-content .description .bio-profile {
+    margin: 20px 0px 0px 0px;
+}
+
+.sobre-content .description .bio-profile p {
+    margin-top: 13px;
+    color: var(--texto-terciario);
+}
