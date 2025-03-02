@@ -257,7 +257,7 @@ header {
 }
 
 .projetos-content .projetos .projeto .card-projeto .card-projeto-content {
-    padding: 20px;
+    padding: 40px;
     background-color: hsla(0, 0%, 0%, 0.623);    
     border-radius: 20px;
     backdrop-filter: blur(5px);

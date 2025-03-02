@@ -1,12 +1,12 @@
 const projetos = [
-    /* {
+     {
         id: 0,
-        url_img: "https://blogs.windows.com/wp-content/uploads/prod/sites/2/2021/10/Windows-11-Bloom-Screensaver-Dark-scaled.jpg",
-        name: "Cardápio Online",
-        description: "Cardápio online onde os clientes podem adicionar produtos ao carrinho e finalizar o pedido diretamente pelo WhatsApp com tudo já calculado.",
-        ancoraEnter: "https://youtube.com",
-        repositorio: "https://google.com"
-    } */
+        url_img: "../Assets/img/projetos/controlly/banner.png",
+        name: "Controlly",
+        description: "Sistema de controle financeiro, para controlar receitas e gastos.",
+        ancoraEnter: "https://controlly.vercel.app",
+        repositorio: "https://github.com/mateus-fer09/controlly"
+    } 
 ];
 
 const exibirProjetos = () => {
@@ -26,7 +26,7 @@ const exibirProjetos = () => {
                     <h3>${val.name}</h3>
                     <p>${val.description}</p>
                     <div class="box-buttons">
-                        <a href="${val.ancoraEnter}">
+                        <a href="${val.ancoraEnter}" target="_blank">
                             <i class="bi bi-eye"></i>
                             <button>Acessar projeto</button>
                         </a>
