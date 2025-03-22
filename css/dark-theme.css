@@ -1,0 +1,28 @@
+/* Tema Escuro */
+body.dark-theme {
+    transition: 0.3s ease;
+    background-color: #040404;
+    color: #fff;
+}
+
+.dark-theme nav {
+    border-bottom: 1px solid #333;
+}
+
+.dark-theme .content-nav #logo {
+    color: #fff;
+}
+
+.dark-theme .content-nav .navigation .content-navigation .links a {
+    color: #f4f4f4;
+}
+
+@media screen and (max-width: 850px) {
+    .dark-theme .content-nav .navigation {
+        background-color: #222;
+    }
+
+    .dark-theme .content-nav #open-nav {
+        color: #fff;
+    }
+}

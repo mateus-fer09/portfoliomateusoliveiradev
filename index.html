@@ -1,115 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Mateus Oliveira - Desenvolvedor Front-end</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Portfólio - Mateus Oliveira | Desenvolvedor Web</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/style-mobile.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
 </head>
-
 <body>
     <header>
-        <div class="header-content">
+        <div class="content-header">
+
             <nav>
-                <div class="nav-content">
-                    <a class="logo" href="index.html">
-                        <div id="logo">
-                            <span class="name-perfil">Mateus Oliveira</span>
-                            <span class="dev">Front-end</span>
-                        </div>
-                    </a>
+                <div class="content-nav">
+                    <a href="index.html" id="logo">{} Mateus Oliveira</a>
+
                     <div class="navigation">
-                        <div class="navigation-content">
+                        <div class="content-navigation">
+
+                            <button id="close-nav">
+                                <i class="bi bi-x-circle"></i>
+                            </button>
+
                             <div class="links">
-                                <a href="index.html" class="ancora">Início</a>
-                                <a href="#skills" class="ancora">Skills</a>
+                                <a href="#about" class="ancora">Sobre</a>
+                                <a href="#habilidades" class="ancora">Habilidades</a>
                                 <a href="#projetos" class="ancora">Projetos</a>
+                                <a href="#contato" class="ancora">Contato</a>
+                            </div>
+
+                            <!-- exibi só na versão mobile -->
+                            <div class="contato-buttons">
+                                <div class="social-btn">
+                                    <a href="https://github.com/mateus-fer09" target="_blank">
+                                        <button id="github">
+                                            <i class="bi bi-github"></i>
+                                        </button>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/mateus-oliveira-web-developer/" target="_blank">
+                                        <button id="linkedin">
+                                            <i class="bi bi-linkedin"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                                <a href="mailto:mateussfer09@gmail.com">
+                                    <button id="email">
+                                        <i class="bi bi-envelope"></i>
+                                        <span>Contato</span>
+                                    </button>
+                                </a>
                             </div>
                         </div>
-                        <button id="close-nav">
-                            <i class="bi bi-x-circle"></i>
-                        </button>
                     </div>
-                    <button id="open-nav">
-                        <i class="bi bi-list"></i>
-                    </button>
-                </div>
-            </nav>
-            <div class="headline">
-                <div class="headline-content">
-                    <h1>Desenvolvedor</h1>
-                    <p>Sou <strong>front-end</strong> em formação, com experiência em HTML, CSS, JavaScript e frameworks
-                        como React. Apesar de estar em constante aprendizado, já desenvolvi projetos pessoais que focam
-                        em interfaces funcionais, responsivas e com boa experiência do usuário.</p>
-                   <a href="#projetos"><button>
-                        <i class="bi bi-eye"></i>
-                        <span>Veja meus projetos</span>
-                    </button> </a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="skills" id="skills">
-            <div class="skills-content">
-                <div class="skill html">
-                    <i class="fa-brands fa-html5"></i>
-                    <span>HTML 5</span>
-                </div>
-                <div class="skill css">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <span>CSS 3</span>
-                </div>
-                <div class="skill js">
-                    <i class="fa-brands fa-js"></i>
-                    <span>JAVASCRIPT</span>
-                </div>
-                <div class="skill react disabled">
-                    <i class="fa-brands fa-react"></i>
-                    <span>REACT</span>
-                </div>
-                <div class="skill node disabled">
-                    <i class="fa-brands fa-node"></i>
-                    <span>NODE.JS</span>
-                </div>
-                <div class="skill mongodb disabled">
-                    <i class="fa-solid fa-database"></i>
-                    <span>mongoDB</span>
-                </div>
-                <div class="skill github disabled">
-                    <i class="fa-brands fa-github"></i>
-                    <span>GitHub</span>
-                </div>
-                <div class="skill sass disabled">
-                    <i class="fa-brands fa-sass"></i>
-                    <span>Sass</span>
-                </div>
-            </div>
-        </section>
-        <section class="projetos" id="projetos">
-            <div class="projetos-content">
-                <div class="headline-projetos">
-                    <h2>Projetos</h2>
-                    <p>Todos os projetos são criações pessoais ou serviços feito para clientes. Ambos estarão
-                        categorizados.</p>
-                </div>
-                <div class="projetos">
-                    <div class="projeto"></div>
-                </div>
-            </div>
-        </section>
-        <saction class="sobre" id="sobre">
-            <div class="sobre-content">
-                <div class="profile">
-                    <div class="foto-perfil">
-                        <img src="Assets/img/EU.jpg" alt="Mateus Oliveira">
-                    </div>
-                    <div class="social">
-                        <a href="https://www.instagram.com/mateuss_hen09/" target="_blank">
-                            <button id="instagram">
-                                <i class="bi bi-instagram"></i>
+
+                    <div class="contato-buttons">
+                        <a href="https://github.com/mateus-fer09" target="_blank">
+                            <button id="github">
+                                <i class="bi bi-github"></i>
                             </button>
                         </a>
                         <a href="https://www.linkedin.com/in/mateus-oliveira-web-developer/" target="_blank">
@@ -117,27 +65,108 @@
                                 <i class="bi bi-linkedin"></i>
                             </button>
                         </a>
-                        <a href="https://github.com/mateus-fer09" target="_blank">
-                            <button id="github">
-                                <i class="bi bi-github"></i>
+                        <a href="mailto:mateussfer09@gmail.com">
+                            <button id="email">
+                                <i class="bi bi-envelope"></i>
+                                <span>Contato</span>
                             </button>
                         </a>
                     </div>
+
+                    <button id="open-nav">
+                        <i class="bi bi-list"></i>
+                    </button>
                 </div>
-                <div class="description">
-                    <div class="head-profile">
-                        <h3>Mateus Oliveira</h3>
+
+                
+            </nav>
+
+            <div class="resumo">
+                <h1 >Olá, eu sou Mateus Oliveira</h1>
+                <span style="display: block;">Desenvolvedor Web</span>
+                <p>Experiênte em criar sites responsivos com design moderno e código limpo.</p>
+
+                <div class="buttons-box">
+                    <a href="#projetos"><button id="btn-projeto" >Ver projetos</button></a>
+
+                    <button disabled style="cursor: not-allowed;">Download CV</button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="sobre" id="about">
+            <div class="content-sobre">
+                <h1>Sobre mim</h1>
+
+                <div class="card-sobre">
+                    <div class="descripiton">
+                        <p>Sou um desenvolvedor web apaixonado por criar soluções digitais elegantes e funcionais. Com um pouco mais de 3 anos de experiência, foco em criar meus projetos o mais responsivos possível.</p>
+                        <p>Comecei como a maioria, pelo HTML, CSS e JavaScript, e desde então tenho buscado aprimorar minhas habilidades como desenvolvedor buscando conhecimento e criando projetos pessoais.</p>
+                        <p>Atualmente estou trabalhando para expandir meu repetório de linguagens e estou muito empolgado em evoluir.</p>
                     </div>
-                    <div class="bio-profile">
-                        <span>💻 Programador em evolução</span>
-                        <p>Olá! Sou desenvolvedor front-end e comecei minha jornada na programação em 2018, mas só em 2023 decidi seguir carreira na área. Tenho bons fundamentos em diversas linguagens e habilidades em criar páginas responsivas para qualquer tamanho de tela. Meu foco é desenvolver soluções para negócios, como lojas virtuais, cardápios online e sistemas de controle de vendas/finanças. Estou sempre buscando melhorar minhas habilidades e me manter atualizado com as novas tecnologias, visando criar projetos eficientes e funcionais</p>
+                    <div class="img-people">
+                        <img src="Assets/img/meu-retrato.png" alt="Minha foto">
                     </div>
                 </div>
             </div>
-        </saction>
-    </main>
-    <script src="js/index.js"></script>
-    <script src="js/projetos.js"></script>
-</body>
+        </section>
 
+        <section class="habilidades" id="habilidades">
+            <div class="content-habilidades">
+                <h1 style="text-align: center; font-size: 2em;">Habilidades</h1>
+
+                <div class="card-habilidades">
+                    <!-- As habilidades serão exibidas aqui -->
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="projetos" id="projetos">
+            <h1>Projetos</h1>
+
+            <div class="content-projetos">
+                <!-- Os projetos serão exibidos aqui -->
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <h1>Entre em Contato</h1>
+
+            <form action="">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required placeholder="Seu nome" autocomplete="off">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="seu.email@exemplo.com" autocomplete="off">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem"></textarea>
+
+                <button id="enviar">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mateus Oliveira. Todos os direitos reservados.</p>
+
+        <div class="social">
+            <a href="https://github.com/mateus-fer09" target="_blank">
+                <i class="bi bi-github"></i>
+            </a>
+            
+            <a href="mailto:mateussfer09@gmail.com">
+                <i class="bi bi-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mateus-oliveira-web-developer/" target="_blank">
+                <i class="bi bi-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+</body>
 </html>
