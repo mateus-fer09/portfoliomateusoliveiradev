@@ -28,8 +28,26 @@ ancoras.forEach((Element) => {
     Element.addEventListener("click", closeNavAncora)
 })
 
-/* exibir as habilidades na página */
+function CV() {
+    const buttonCV = document.querySelector(".btn-cv");
+    const contentCV = document.querySelector(".cv-box");
+  
+    const exibir = () => {
+        const currentWidth = window.getComputedStyle(contentCV).width;
+        if (currentWidth === "0px") {
+            contentCV.style.width = "500px";
+        } else {
+            contentCV.style.width = "0px";
+        }
+    };
+  
+    buttonCV.addEventListener("click", exibir);
+}
 
+CV()
+
+
+/* exibir as habilidades na página */
 
 
 const skillContent = document.querySelector(".card-habilidades");

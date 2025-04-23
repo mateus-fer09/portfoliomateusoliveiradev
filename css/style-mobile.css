@@ -41,6 +41,7 @@
     .content-nav .navigation .content-navigation .links a {
         width: 100%;
         transition: 0.3s ease;
+        font-size: 1.2em;
     }
 
     .content-nav .navigation .content-navigation .links a:hover {

@@ -30,6 +30,7 @@ header,main,footer {
 body {
     height: 3000px;
     background-color: #E6E6E6;
+    position: relative;
 }
 
 html {
@@ -169,8 +170,12 @@ nav {
 }
 
 .content-header .resumo .buttons-box button:hover {
-    transform: translate(0px, -5px);
-    background-color: #222;
+    transform: translate(0px, -2px);
+    background-color: #fff;
+}
+
+.content-header .resumo .buttons-box button:active {
+    transform: scale(98%);
 }
 
 .content-header .resumo .buttons-box #btn-projeto {
@@ -412,6 +417,88 @@ nav {
     color: #fff;
     padding: 10px;
     font-weight: 500;
+}
+
+.cv-box {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10;
+    overflow-x: scroll;
+    transition: 0.3s ease;
+
+    & .cv-content {
+        padding: 20px
+    }
+
+    & .cv-content .info {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    & .cv-content .info .information {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    & .cv-content .main {
+        margin: 25px 0px;
+    }
+
+    & .cv-content .main h3 {
+        margin: 10px;
+        border-bottom: 1px solid #cdcdcd;
+    }
+
+    & .cv-content .main h4 {
+        padding: 10px;
+    }
+
+    & .cv-content .main h4 > span {
+        font-weight: 400;
+        color: #747474;
+        font-style: italic;
+        font-size: 0.9em;
+    }
+
+    & .cv-content .main p {
+        padding: 10px;
+        font-size: 0.9em;
+        text-align: justify;
+        margin-top: -10px;
+    }
+
+    & .cv-content .main ul {
+        padding: 20px;
+    }
+
+    & .cv-content .main ul li {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+    & .cv-content .main button {
+        padding: 10px;
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1em;
+        transition: 0.3s ease;
+    }
+
+    & .cv-content .main button:hover {
+        transform: scale(98%);
+        background-color: #111;
+    }
 }
 
 footer {
