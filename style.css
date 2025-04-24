@@ -28,7 +28,6 @@ header,main,footer {
 }
 
 body {
-    height: 3000px;
     background-color: #E6E6E6;
     position: relative;
 }
@@ -38,7 +37,7 @@ html {
 }
 
 header {
-    height: 640px;
+    min-height: 640px;
     background-image: url('Assets/img/backgorund-header.png');
     background-attachment: fixed;
     background-size: cover;
@@ -47,6 +46,75 @@ header {
 .content-header {
     width: 100%; min-height: 640px;
     background-color: #11111100;
+    padding-bottom: 10px;
+
+    & .container {
+        padding: 40px;
+        max-width: 1000px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 20px
+    }
+
+    & .container .detalhes-projetos h1 {
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+
+    & .container .detalhes-projetos h2 {
+        margin: 30px 0px;
+    }
+
+    & .container .detalhes-projetos h3 {
+        margin: 30px 0px;
+    }
+
+    & .container .detalhes-projetos ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 30px 0px;
+    }
+
+    & .container .detalhes-projetos strong {
+        color: rgb(27, 27, 27);
+    }
+
+    & .container .detalhes-projetos .banner-projeto {
+        max-width: 600px;
+        margin: 20px 0px;
+    }
+
+    & .container .detalhes-projetos .detalhes p {
+        margin: 10px 0px;
+    }
+
+    & .container .detalhes-projetos .links-projeto {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    & .container .detalhes-projetos .links-projeto a > button {
+        font-size: 1em;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: rgb(0, 58, 233);
+        color: #f2f2f2;
+        border: none;
+        transition: 0.3s ease;
+    }
+
+    & .container .detalhes-projetos .links-projeto a > button:active {
+        transform: scale(98%);
+    }
+
+    & .container .detalhes-projetos .links-projeto a > #btn-port {
+        background-color: #000;
+        color: #fff;
+    }
 }
 
 nav {
@@ -272,6 +340,7 @@ nav {
 .projetos {
     margin-top: 40px;
     padding: 40px;
+    height: auto;
 }
 
 .projetos h1 {
@@ -280,91 +349,57 @@ nav {
 }
 
 .projetos .content-projetos {
+    margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     gap: 20px;
     justify-items: center;
-    margin-top: 50px;
 }
 
 .projetos .content-projetos .projeto {
-    width: 400px;
-    height: auto;
-    border: 1px solid #cdcdcd;
+    background-color: #111;
+    color: #fff;
+    width: 330px;
+    min-height: 200px;
+    transition: 0.3s ease;
     border-radius: 10px;
-    box-shadow: 1px 1px 5px #cdcdcd;
-    transition: 0.3s;
 }
 
 .projetos .content-projetos .projeto:hover {
-    transform: scale(98%) translate(0px, -5px);
+    box-shadow: 1px 1px 5px #222;
 }
 
-.projetos .content-projetos .projeto .banner {
+.projetos .content-projetos .projeto .info-drop {
     width: 100%;
-    height: 200px;
-    background-color: #000;
-    border-radius: 10px 10px 0px 0px;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    padding: 10px 15px;
+    background-color: #11111185;
+    border-radius: 10px;
 }
 
-.projetos .content-projetos .projeto .banner img {
-    border-radius: 10px 10px 0px 0px;
+.projetos .content-projetos .projeto .info-drop h4 {
+    margin-bottom: 10px;
+}
+
+.projetos .content-projetos .projeto .info-drop p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.projetos .content-projetos .projeto .info-drop button {
     width: 100%;
-}
-
-.projetos .content-projetos .projeto .headline {
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 0px 0px 10px 10px;
-}
-
-.projetos .content-projetos .projeto .headline h2 {
-    margin-bottom: 13px;
-}
-
-.projetos .content-projetos .projeto .headline p {
-    color: #4d4d4d;
-}
-
-.projetos .content-projetos .projeto .headline .tecnologias {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.projetos .content-projetos .projeto .headline .tecnologias span {
-    font-size: 0.8em;
-    background-color: #d6d6d6;
-    border-radius: 15px;
-    padding: 5px 25px;
-    font-weight: 600;
-}
-
-.projetos .content-projetos .projeto .headline .buttons-action {
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.projetos .content-projetos .projeto .headline .buttons-action button {
-    width: 190px;
-    border: 1px solid #cdcdcd;
-    padding: 5px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    border: none;
+    padding: 5px 0px;
+    border-radius: 10px;
     font-size: 1em;
-    font-weight: 500;
-    border-radius: 7px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    margin-top: 30px;
 }
 
-.projetos .content-projetos .projeto .headline .buttons-action .demo {
-    background-color: #000;
-    color: #fff;
+.projetos .content-projetos .projeto .info-drop button:active {
+    transform: scale(98%);
 }
 
 .contato {

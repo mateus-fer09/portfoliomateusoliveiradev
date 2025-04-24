@@ -35,7 +35,7 @@ function CV() {
     const exibir = () => {
         const currentWidth = window.getComputedStyle(contentCV).width;
         if (currentWidth === "0px") {
-            contentCV.style.width = "500px";
+            contentCV.style.maxwidth = "700px";
         } else {
             contentCV.style.width = "0px";
         }
@@ -71,37 +71,41 @@ function exibirHabilidades() {
 
 exibirHabilidades();
 
-const projetosContent = document.querySelector(".content-projetos")
+const projetosContent = document.querySelector(".content-projetos");
 
 function exibirProjetos() {
+    // Limpa o conteúdo antes de adicionar (evita duplicação)
+    projetosContent.innerHTML = '';
+    
     projetos.forEach((item) => {
-        projetosContent.innerHTML += `
-            <div class="projeto">
-                <div class="banner">
-                    <img src="${item.banner}" alt="banner do projeto">
-                </div>
-                <div class="headline">
-                    <h2>${item.titulo}</h2>
+        const projetoHTML = `
+            <div class="projeto" style="background-image: url('${item.imagem}'); background-repeat: no-repeat; background-size: cover; background-position: top center;">
+                <div class="info-drop">
+                    <h4>${item.titulo}</h4>
                     <p>${item.descricao}</p>
-                    
-                    <div class="tecnologias">
-                    ${item.tecnologias.map(tech => `<span>${tech}</span>`).join("")}
-                    </div>
-
-                    <div class="buttons-action">
-                        <button onclick="window.open('${item.link_repositorio}', '_blank')">
-                        <i class="bi bi-github"></i>
-                        <span>Código</span>
-                    </button>
-                    <button class="demo" onclick="window.open('${item.link_demo}', '_blank')">
-                        <i class="bi bi-box-arrow-up-right"></i>
-                        <span>Demo</span>
-                    </button>
-                    </div>
+                    <button class="${item.classButton} btn-open-projeto" data-id="${item.id}">Ver mais</button>
                 </div>
             </div>
-        `
-    })
+        `;
+        
+        projetosContent.insertAdjacentHTML('beforeend', projetoHTML);
+    });
+
+    // Adiciona event listeners aos botões
+    document.querySelectorAll('.btn-open-projeto').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const id = e.target.getAttribute('data-id');
+            abrirDetalhesProjeto(id);
+        });
+    });
 }
 
-exibirProjetos()
+function abrirDetalhesProjeto(id) {
+    const projeto = projetos.find(p => p.id == id);
+    if (projeto) {
+        // Redireciona para projeto.html com o ID na URL
+        window.location.href = `detalhes-do-projeto.html?id=${id}`;
+    }
+}
+
+exibirProjetos();
