@@ -98,6 +98,7 @@ header {
         display: flex;
         align-items: center;
         gap: 20px;
+        flex-wrap: wrap;
     }
 
     & .container .detalhes-projetos .links-projeto a > button {
@@ -531,6 +532,7 @@ nav {
         font-weight: 600;
         font-size: 1em;
         transition: 0.3s ease;
+        margin-bottom: 20px;
     }
 
     & .cv-content .main button:hover {

@@ -30,18 +30,19 @@ ancoras.forEach((Element) => {
 
 function CV() {
     const buttonCV = document.querySelector(".btn-cv");
+    const buttonCloseCV = document.querySelector("#close-cv")
     const contentCV = document.querySelector(".cv-box");
   
     const exibir = () => {
-        const currentWidth = window.getComputedStyle(contentCV).width;
-        if (currentWidth === "0px") {
-            contentCV.style.width = "500px";
-        } else {
-            contentCV.style.width = "0px";
-        }
+        contentCV.style.width = "500px"
     };
+
+    const fechar = () => {
+        contentCV.style.width = "0px"
+    }
   
     buttonCV.addEventListener("click", exibir);
+    buttonCloseCV.addEventListener("click", fechar);
 }
 
 CV()
