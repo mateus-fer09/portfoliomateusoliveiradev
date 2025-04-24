@@ -35,7 +35,7 @@ function CV() {
     const exibir = () => {
         const currentWidth = window.getComputedStyle(contentCV).width;
         if (currentWidth === "0px") {
-            contentCV.style.maxwidth = "700px";
+            contentCV.style.width = "500px";
         } else {
             contentCV.style.width = "0px";
         }
